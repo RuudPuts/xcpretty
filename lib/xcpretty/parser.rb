@@ -410,7 +410,10 @@ module XCPretty
         @formatted_summary = false
         @failures = {}
         @assertion_failure = []
-        @current_assertion_failure = {}
+        @current_assertion_failure = {
+            file: '',
+            reason: ''
+        }
       when TESTS_RUN_COMPLETION_MATCHER
         @tests_done = true
       when TEST_UI_FAILURE_MATCHER
